@@ -1,0 +1,1 @@
+export { TableGeneric } from './Table'

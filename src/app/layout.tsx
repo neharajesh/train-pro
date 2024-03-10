@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://css.gg/css" rel="stylesheet" />
+      </head>
       <body className={inter.className}>
         <Header />
         <div className="flex min-h-screen flex-col items-center justify-between p-24">

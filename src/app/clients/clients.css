@@ -1,0 +1,22 @@
+.clients-page-container {
+    position: relative;
+    width: 100%;
+}
+
+.add-clients-button {
+    display: flex;
+    gap: 8px;
+    background-color: var(--button-primary);
+    padding: 8px 16px;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+    position: absolute;
+    right: 0;
+}
+
+.gg-add-r {
+    width: 14px;
+    height: 14px;
+}
