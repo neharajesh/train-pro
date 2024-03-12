@@ -1,5 +1,5 @@
 "use client";
-import { Section } from "../components/Section";
+import { Section } from "../_components/Section";
 import { Button, Flex, Table } from "@mantine/core";
 import "./clients.css";
 import classes from "./clientsMantine.module.css";
