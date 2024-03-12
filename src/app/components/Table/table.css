@@ -1,0 +1,17 @@
+thead {
+    background-color: #AB87FF;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+thead th {
+    border: 1px solid var(--border-grey);
+    border-radius: 6px;
+    padding: 8px;
+}
+
+tbody td {
+    border: 1px solid var(--border-grey);
+    border-radius: 6px;
+    padding: 8px;
+}

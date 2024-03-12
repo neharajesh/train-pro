@@ -4,6 +4,10 @@ import "./globals.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
+import "@mantine/core/styles.css";
+
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,12 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <ColorSchemeScript />
         <link href="https://css.gg/css" rel="stylesheet" />
       </head>
       <body className={inter.className}>
         <Header />
         <div className="flex min-h-screen flex-col items-center justify-between p-24">
-          {children}
+          <MantineProvider>{children}</MantineProvider>
         </div>
         <Footer />
       </body>
