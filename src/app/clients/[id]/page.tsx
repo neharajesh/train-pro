@@ -9,7 +9,6 @@ const getCurrentClient = (id: number) => {
 
 const Page = ({ params }: any) => {
   const client = getCurrentClient(params.id);
-  console.log({ client });
 
   return (
     client && (

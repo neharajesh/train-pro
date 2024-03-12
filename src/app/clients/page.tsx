@@ -1,6 +1,6 @@
 "use client";
 import { Section } from "../_components/Section";
-import { Button, Flex, Table } from "@mantine/core";
+import { Button, Flex, Table, Text } from "@mantine/core";
 import classes from "./clientsMantine.module.css";
 import { Client, ClientsTableProps } from "./types";
 import { clients as staticClients } from "../data/clients";
@@ -44,7 +44,9 @@ const ClientsTable = ({ clients }: ClientsTableProps) => {
         {clients.map((item: any) => (
           <Table.Tr key={item.id}>
             <Table.Td onClick={() => handleNameClick(item)}>
-              {item.name}
+              <Flex gap={6} align="center" style={{ cursor: "pointer" }}>
+                {item.name} &#x2934;
+              </Flex>
             </Table.Td>
             <Table.Td>{item.lastCheckIn}</Table.Td>
             <Table.Td>{getPlanDue(item)}</Table.Td>
