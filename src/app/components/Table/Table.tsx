@@ -16,7 +16,7 @@ export const TableGeneric = ({
       </thead>
 
       <tbody>
-        {bodyValues.map((item, i) => (
+        {bodyValues.map((item: any, i: number) => (
           <tr key={`body-${item.name}-${i}`}>
             <td className="">{item.name}</td>
             <td className="">{item.last_check_in}</td>
