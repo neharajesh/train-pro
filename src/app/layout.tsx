@@ -24,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <ColorSchemeScript />
+        <link href="/kettlebell.svg" rel="shortcut icon" />
         <link href="https://css.gg/css" rel="stylesheet" />
       </head>
       <body className={inter.className}>
