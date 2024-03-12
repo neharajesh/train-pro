@@ -36,7 +36,7 @@ export default function Home() {
               <Text fw={700} fz={32}>
                 4
               </Text>
-              <Text>plans ending today</Text>
+              <Text ta="center">plans ending today</Text>
             </Flex>
           </Card>
         </Flex>
