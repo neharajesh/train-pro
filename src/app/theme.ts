@@ -2,6 +2,8 @@ import { createTheme } from "@mantine/core";
 
 export const theme = createTheme({
   primaryColor: "primary",
+  autoContrast: true,
+  defaultRadius: "sm",
   colors: {
     primary: [
       "#FEE9EF",
@@ -76,4 +78,5 @@ export const theme = createTheme({
       "#771D1D",
     ],
   },
+  cursorType: "pointer",
 });

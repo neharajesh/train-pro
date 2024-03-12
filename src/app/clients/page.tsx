@@ -2,6 +2,7 @@
 import { Section } from "../components/Section";
 import { Button, Flex, Table } from "@mantine/core";
 import "./clients.css";
+import classes from "./clientsMantine.module.css";
 
 const Clients = () => {
   const tableData = [
@@ -30,9 +31,16 @@ const Clients = () => {
 
   return (
     <div className="clients-page-container">
-      <button className="add-clients-button">
-        <i className="gg-add-r" /> Add Client
-      </button>
+      <Button
+        size="sm"
+        className={classes.addClientsButton}
+        style={(theme) => ({
+          backgroundColor: theme.colors.secondary[4],
+        })}
+        leftSection={<i className="gg-add-r" />}
+      >
+        Add Client
+      </Button>
       <Section
         title="Clients"
         description="Manage Clients Here, See their latest Progress & Check-ins"
