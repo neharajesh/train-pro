@@ -20,3 +20,8 @@
     width: 14px;
     height: 14px;
 }
+
+.clients-table {
+    max-width: 67%;
+    border-radius: 6px;
+}
