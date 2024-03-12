@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <p>Welcome to Train Pro! </p>
+      <p>Hey Coach, Welcome to Train Pro! </p>
     </>
   );
 }

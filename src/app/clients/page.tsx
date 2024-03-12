@@ -4,9 +4,9 @@ import { Button, Flex, Table } from "@mantine/core";
 import classes from "./clientsMantine.module.css";
 import { Client, ClientsTableProps } from "./types";
 import { clients as staticClients } from "../data/clients";
-import "./clients.css";
 import { useState } from "react";
 import dayjs from "dayjs";
+import "./clients.css";
 
 const ClientsTable = ({ clients }: ClientsTableProps) => {
   const getPlanDue = (client: Client) => {

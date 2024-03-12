@@ -1,0 +1,6 @@
+.header {
+    display: flex;
+    justify-content: justify-between;
+    border-bottom: 1px solid #F3F4F6;
+
+}

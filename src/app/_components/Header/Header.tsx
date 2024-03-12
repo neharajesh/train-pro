@@ -1,15 +1,24 @@
+import classes from "./header.module.css";
+import { Flex, Text } from "@mantine/core";
+
 export const Header = () => {
   return (
-    <header className="flex justify-between px-8 py-6 border-b border-slate-100">
-      <a href="/"> Train Pro</a>
-      <div className="flex gap-8">
+    <Flex justify="space-between" p={20} className={classes.header}>
+      <a href="/">
+        <Flex gap={4}>
+          <img src="/kettlebell.svg" height={20} width={20} />{" "}
+          <Text>Train Pro</Text>
+        </Flex>
+      </a>
+
+      <Flex gap={20}>
         <a href="/clients">Clients</a>
         <a href="/checkin">Check In</a>
         <a href="/library">Library</a>
-      </div>
+      </Flex>
       <div>
         <p>Login</p>
       </div>
-    </header>
+    </Flex>
   );
 };

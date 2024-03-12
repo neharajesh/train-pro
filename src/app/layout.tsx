@@ -6,7 +6,7 @@ import { Footer } from "./_components/Footer";
 
 import "@mantine/core/styles.css";
 
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { ColorSchemeScript, Flex, MantineProvider } from "@mantine/core";
 import { theme } from "./theme";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,11 +29,19 @@ export default function RootLayout({
         <link href="https://css.gg/css" rel="stylesheet" />
       </head>
       <body className={inter.className}>
-        <Header />
-        <div className="flex min-h-screen flex-col items-center justify-between p-24">
-          <MantineProvider theme={theme}>{children}</MantineProvider>
-        </div>
-        <Footer />
+        <MantineProvider theme={theme}>
+          <Header />
+          <Flex
+            p={48}
+            direction="column"
+            mih={"90vh"}
+            align="center"
+            justify="space-between"
+          >
+            {children}
+          </Flex>
+          <Footer />
+        </MantineProvider>
       </body>
     </html>
   );
