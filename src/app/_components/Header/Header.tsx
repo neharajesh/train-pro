@@ -11,7 +11,7 @@ export const Header = () => {
         </Flex>
       </a>
 
-      <Flex gap={20}>
+      <Flex gap={40}>
         <a href="/clients">Clients</a>
         <a href="/checkin">Check In</a>
         <a href="/library">Library</a>
