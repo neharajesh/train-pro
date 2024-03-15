@@ -1,8 +1,11 @@
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+
+dayjs.extend(customParseFormat);
 
 type CheckIn = {
   client: number;
-  checkinDate: Date;
+  checkinDate: Dayjs;
   images: string[];
   stats: {
     anthropometric: {
@@ -47,7 +50,7 @@ type CheckIn = {
 export const checkIns: CheckIn[] = [
   {
     client: 1, //client id
-    checkinDate: dayjs("12/03/2024", "DD/MM/YYYY").toDate(),
+    checkinDate: dayjs("12/03/2024", "DD/MM/YYYY"),
     images: [],
     stats: {
       anthropometric: {
@@ -90,7 +93,7 @@ export const checkIns: CheckIn[] = [
   },
   {
     client: 2, //client id
-    checkinDate: dayjs("12/03/2024", "DD/MM/YYYY").toDate(),
+    checkinDate: dayjs("12/03/2024", "DD/MM/YYYY"),
     images: [],
     stats: {
       anthropometric: {

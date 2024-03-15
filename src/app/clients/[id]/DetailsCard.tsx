@@ -10,7 +10,7 @@ export const DetailsCard = ({ cardTitle, cardDetails }: DetailsCardProps) => {
     <Card w="30%" withBorder padding="lg">
       <Card.Section withBorder>
         <Text my={10} mx={10} fw={600}>
-          Basic Details
+          {cardTitle}
         </Text>
       </Card.Section>
       <Card.Section w="100%">

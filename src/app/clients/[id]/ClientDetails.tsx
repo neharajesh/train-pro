@@ -14,7 +14,7 @@ export const ClientDetails = ({ client }: ClientDetailsProps) => {
         cardDetails={[
           { title: "Full Name", value: client.name },
           { title: "Email", value: client.email },
-          { title: "Date of Birth", value: client.dob },
+          { title: "Date of Birth", value: client.dob.format("DD/MM/YYYY") },
           { title: "Blood Group", value: client.bloodGroup },
         ]}
       />
@@ -24,8 +24,14 @@ export const ClientDetails = ({ client }: ClientDetailsProps) => {
         cardDetails={[
           { title: "Current Plan", value: client.currentPlan.name },
           { title: "Current Plan Type", value: client.currentPlanType.name },
-          { title: "Plan Start Date", value: client.planStartDate },
-          { title: "Last Check In Date", value: client.lastCheckIn },
+          {
+            title: "Plan Start Date",
+            value: client.planStartDate.format("DD/MM/YYYY"),
+          },
+          {
+            title: "Last Check In Date",
+            value: client.lastCheckIn.format("DD/MM/YYYY"),
+          },
         ]}
       />
 
