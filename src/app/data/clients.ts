@@ -1,11 +1,14 @@
 import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
 import { Client } from "../clients/types";
+
+dayjs.extend(customParseFormat);
 
 export const clients: Client[] = [
   {
     id: 1,
     name: "Neha Rajesh",
-    dob: dayjs("26/07/1997", "DD/MM/YYYY").toDate(),
+    dob: dayjs("26/07/1997", "DD/MM/YYYY"),
     bloodGroup: "O+",
     currentPlan: {
       id: 1,
@@ -13,7 +16,7 @@ export const clients: Client[] = [
       duration: 3,
       durationType: "months",
     }, //planId
-    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY").toDate(),
+    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY"),
     currentPlanType: {
       id: 1,
       name: "Weight Loss",
@@ -26,12 +29,12 @@ export const clients: Client[] = [
       protein: 180,
       fats: 80,
     },
-    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY").toDate(),
+    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY"),
   },
   {
     id: 2,
     name: "Joey Tribbiani",
-    dob: dayjs("26/07/1997", "DD/MM/YYYY").toDate(),
+    dob: dayjs("26/07/1997", "DD/MM/YYYY"),
     bloodGroup: "O+",
     currentPlan: {
       id: 1,
@@ -39,7 +42,7 @@ export const clients: Client[] = [
       duration: 3,
       durationType: "months",
     }, //planId
-    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY").toDate(),
+    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY"),
     currentPlanType: {
       id: 1,
       name: "Weight Loss",
@@ -52,12 +55,12 @@ export const clients: Client[] = [
       protein: 180,
       fats: 80,
     },
-    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY").toDate(),
+    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY"),
   },
   {
     id: 3,
     name: "Phoebe Buffay",
-    dob: dayjs("26/07/1997", "DD/MM/YYYY").toDate(),
+    dob: dayjs("26/07/1997", "DD/MM/YYYY"),
     bloodGroup: "O+",
     currentPlan: {
       id: 1,
@@ -65,7 +68,7 @@ export const clients: Client[] = [
       duration: 3,
       durationType: "months",
     }, //planId
-    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY").toDate(),
+    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY"),
     currentPlanType: {
       id: 1,
       name: "Weight Loss",
@@ -78,12 +81,12 @@ export const clients: Client[] = [
       protein: 180,
       fats: 80,
     },
-    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY").toDate(),
+    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY"),
   },
   {
     id: 4,
     name: "Ross Geller",
-    dob: dayjs("26/07/1997", "DD/MM/YYYY").toDate(),
+    dob: dayjs("26/07/1997", "DD/MM/YYYY"),
     bloodGroup: "O+",
     currentPlan: {
       id: 1,
@@ -91,7 +94,7 @@ export const clients: Client[] = [
       duration: 3,
       durationType: "months",
     }, //planId
-    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY").toDate(),
+    planStartDate: dayjs("12/02/2024", "DD/MM/YYYY"),
     currentPlanType: {
       id: 1,
       name: "Weight Loss",
@@ -104,6 +107,6 @@ export const clients: Client[] = [
       protein: 180,
       fats: 80,
     },
-    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY").toDate(),
+    lastCheckIn: dayjs("11/03/2024", "DD/MM/YYYY"),
   },
 ];

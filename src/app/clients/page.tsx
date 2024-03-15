@@ -10,8 +10,7 @@ import "./clients.css";
 
 const ClientsTable = ({ clients }: ClientsTableProps) => {
   const getPlanDue = (client: Client) => {
-    const currentDate = dayjs(client.planStartDate, "DD/MM/YYYY");
-    const planEndDate = currentDate.add(
+    const planEndDate = client.planStartDate.add(
       client.currentPlan.duration,
       client.currentPlan.durationType
     );
@@ -48,7 +47,7 @@ const ClientsTable = ({ clients }: ClientsTableProps) => {
                 {item.name} &#x2934;
               </Flex>
             </Table.Td>
-            <Table.Td>{item.lastCheckIn}</Table.Td>
+            <Table.Td>{item.lastCheckIn.format("DD/MM/YYYY")}</Table.Td>
             <Table.Td>{getPlanDue(item)}</Table.Td>
             <Table.Td>
               {item.actions === "setup" ? (

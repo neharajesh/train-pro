@@ -1,10 +1,12 @@
+import { Dayjs } from "dayjs";
+
 export type Client = {
   id: number;
   name: string;
-  dob: Date;
+  dob: Dayjs;
   bloodGroup: string;
   currentPlan: any;
-  planStartDate: Date;
+  planStartDate: Dayjs;
   currentPlanType: any;
   email: string;
   checkinType: string;
@@ -14,7 +16,7 @@ export type Client = {
     protein: number;
     fats: number;
   };
-  lastCheckIn: Date;
+  lastCheckIn: Dayjs;
 };
 
 export type ClientsTableProps = Readonly<{

@@ -66,8 +66,8 @@ export default function Home() {
                         <Image
                           src="/green-check.svg"
                           alt="green-check-svg"
-                          height={10}
-                          width={10}
+                          height={14}
+                          width={14}
                         />
                         Paid
                       </Flex>
@@ -114,8 +114,8 @@ export default function Home() {
                         <Image
                           src="/green-check.svg"
                           alt="green-check-svg"
-                          height={10}
-                          width={10}
+                          height={14}
+                          width={14}
                         />
                         Paid
                       </Flex>
