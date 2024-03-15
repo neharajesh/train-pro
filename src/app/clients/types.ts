@@ -1,10 +1,10 @@
 export type Client = {
   id: number;
   name: string;
-  dob: string;
+  dob: Date;
   bloodGroup: string;
   currentPlan: any;
-  planStartDate: string;
+  planStartDate: Date;
   currentPlanType: any;
   email: string;
   checkinType: string;
@@ -14,7 +14,7 @@ export type Client = {
     protein: number;
     fats: number;
   };
-  lastCheckIn: string;
+  lastCheckIn: Date;
 };
 
 export type ClientsTableProps = Readonly<{

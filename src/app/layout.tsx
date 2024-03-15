@@ -5,6 +5,7 @@ import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 
 import "@mantine/core/styles.css";
+import "@mantine/dates/styles.css";
 
 import { ColorSchemeScript, Flex, MantineProvider } from "@mantine/core";
 import { theme } from "./theme";
