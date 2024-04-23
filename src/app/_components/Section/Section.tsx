@@ -1,11 +1,12 @@
+import { Box, Text } from "@mantine/core";
 import { SectionProps } from "./types";
 
 export const Section = ({ title, description, children }: SectionProps) => {
   return (
-    <div className="block w-full">
+    <Box className="block w-full">
       <h2 className="text-xl pb-2">{title}</h2>
-      {description && <p className="text-slate-600">{description}</p>}
+      {description && <Text c="grey">{description}</Text>}
       <div className="pt-8">{children}</div>
-    </div>
+    </Box>
   );
 };

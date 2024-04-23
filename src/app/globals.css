@@ -6,10 +6,15 @@
   --button-primary: #52B788;
   --border-grey: #E5E5E5;
   --border-grey-light: #F9FAFB;
+
+  --text-primary: #fff;
+  --text-secondary: #aaa;
 }
 
 
 body {
+  /* background-color: #212121; 
+  color: #fff; */
   background: #F9FAFB; 
 }
 
