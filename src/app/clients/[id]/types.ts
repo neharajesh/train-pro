@@ -1,10 +1,10 @@
 import { Client } from "../types";
 
-export type CheckinDetailsProps = {
+type CheckinDetailsProps = {
   client: Client;
 };
 
-export type AnthroStats = {
+type AnthroStats = {
   bloodGlucose: number;
   bloodGlucoseUnit: string;
   rhr: number;
@@ -12,7 +12,7 @@ export type AnthroStats = {
   weightUnit: string;
 };
 
-export type BioStats = {
+type BioStats = {
   energy: number;
   hrv: number;
   hunger: number;
@@ -20,11 +20,35 @@ export type BioStats = {
   stress: number;
 };
 
-export type FluidsStats = {
+type FluidsStats = {
   caffeine: number;
   caffeineUnit: string;
   sleep: string;
   steps: number;
   water: number;
   waterUnit: string;
+};
+
+type TrainingStats = {
+  strengthTraining: string;
+  strengthRating: string;
+  cardioTime: number;
+  cardioTimeUnit: string;
+  steps: number;
+};
+
+type NutritionStats = {
+  calories: number;
+  carbs: number;
+  protein: number;
+  fats: number;
+};
+
+export type {
+  CheckinDetailsProps,
+  AnthroStats,
+  BioStats,
+  FluidsStats,
+  TrainingStats,
+  NutritionStats,
 };

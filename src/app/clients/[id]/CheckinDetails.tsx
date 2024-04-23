@@ -10,6 +10,8 @@ import {
   getAnthropometricStats,
   getBiofeedbackStats,
   getFluidsStats,
+  getTrainingStats,
+  getNutritionStats,
 } from "./helpers";
 import { CheckinDetailsProps } from "./types";
 
@@ -20,13 +22,11 @@ export const CheckinDetails = ({ client }: CheckinDetailsProps) => {
   const [currentCheckIn, setCurrentCheckIn] = useState<any>(null);
 
   const handleDateChange = (value: DateValue) => {
-    // const checkin = null;
     const checkin = checkIns.find(
       (checkin) =>
         checkin.checkinDate.isSame(dayjs(value)) && checkin.client === client.id
     );
 
-    console.log({ value, checkin });
     setValue(value);
     setCurrentCheckIn(checkin);
   };
@@ -50,9 +50,9 @@ export const CheckinDetails = ({ client }: CheckinDetailsProps) => {
             No check ins found for this date
           </Text>
         )}
-        {console.log({ currentCheckIn })}
+
         {currentCheckIn && (
-          <Flex w="100%" mt={24} justify="space-between">
+          <Flex w="100%" mt={40} justify="space-evenly" wrap="wrap" gap={20}>
             <DetailsCard
               cardTitle="Anthropometric"
               cardDetails={getAnthropometricStats(
@@ -68,6 +68,18 @@ export const CheckinDetails = ({ client }: CheckinDetailsProps) => {
             <DetailsCard
               cardTitle="Fluids"
               cardDetails={getFluidsStats(currentCheckIn.stats.fluids)}
+            />
+            <DetailsCard
+              cardTitle="Training"
+              cardDetails={getTrainingStats(currentCheckIn.stats.training)}
+            />
+            <DetailsCard
+              cardTitle="Nutrition"
+              cardDetails={getNutritionStats(currentCheckIn.stats.nutrition)}
+            />
+            <DetailsCard
+              cardTitle="Workout Notes"
+              cardDetails={[{ title: "", value: "" }]}
             />
           </Flex>
         )}

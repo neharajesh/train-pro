@@ -7,7 +7,7 @@ type DetailsCardProps = {
 
 export const DetailsCard = ({ cardTitle, cardDetails }: DetailsCardProps) => {
   return (
-    <Card w="30%" withBorder padding="lg">
+    <Card miw={300} w="30%" withBorder padding="lg">
       <Card.Section withBorder>
         <Text my={10} mx={10} fw={600}>
           {cardTitle}

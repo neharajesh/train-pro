@@ -1,6 +1,12 @@
-import { AnthroStats, BioStats, FluidsStats } from "./types";
+import {
+  AnthroStats,
+  BioStats,
+  FluidsStats,
+  NutritionStats,
+  TrainingStats,
+} from "./types";
 
-export const getAnthropometricStats = (anthroStats: AnthroStats) => {
+const getAnthropometricStats = (anthroStats: AnthroStats) => {
   return [
     {
       title: "Weight",
@@ -17,7 +23,7 @@ export const getAnthropometricStats = (anthroStats: AnthroStats) => {
   ];
 };
 
-export const getBiofeedbackStats = (bioStats: BioStats) => {
+const getBiofeedbackStats = (bioStats: BioStats) => {
   return [
     { title: "Energy", value: bioStats.energy },
     { title: "HRV", value: bioStats.hrv },
@@ -27,11 +33,40 @@ export const getBiofeedbackStats = (bioStats: BioStats) => {
   ];
 };
 
-export const getFluidsStats = (stats: FluidsStats) => {
+const getFluidsStats = (stats: FluidsStats) => {
   return [
     { title: "Caffeine", value: `${stats.caffeine} ${stats.caffeineUnit}` },
     { title: "Sleep", value: stats.sleep },
     { title: "Steps", value: stats.steps },
     { title: "Water", value: `${stats.water} ${stats.waterUnit}` },
   ];
+};
+
+const getTrainingStats = (stats: TrainingStats) => {
+  return [
+    { title: "Strength Training?", value: stats.strengthTraining },
+    { title: "Rate of strength", value: `${stats.strengthRating}/10` },
+    {
+      title: "Cardio Time",
+      value: `${stats.cardioTime} ${stats.cardioTimeUnit}`,
+    },
+    { title: "Steps", value: stats.steps },
+  ];
+};
+
+const getNutritionStats = (stats: NutritionStats) => {
+  return [
+    { title: "Calories", value: stats.calories },
+    { title: "Carbs", value: stats.carbs },
+    { title: "Protein", value: stats.protein },
+    { title: "Fats", value: stats.fats },
+  ];
+};
+
+export {
+  getAnthropometricStats,
+  getBiofeedbackStats,
+  getFluidsStats,
+  getTrainingStats,
+  getNutritionStats,
 };

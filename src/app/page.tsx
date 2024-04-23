@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, Flex, Text, Table } from "@mantine/core";
+import { Card, Flex, Text, Table, Box } from "@mantine/core";
 import { Section } from "./_components/Section";
 import Image from "next/image";
 
@@ -13,6 +13,7 @@ export default function Home() {
       title="Hey Coach, Welcome Back!"
       description="Your client updates are here."
     >
+      <Box></Box>
       <Flex justify="space-between" gap={30}>
         <Flex gap={20} w="40%">
           <Card withBorder h={150} w={200}>
